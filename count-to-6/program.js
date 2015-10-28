@@ -1,8 +1,6 @@
 /*global console:true*/
 /*global process:true*/
 
-var challenge = 4;
-
 (function (f) {
     'use strict';
 
@@ -48,6 +46,33 @@ var challenge = 4;
 
             foot.kick();
 
+        },
+
+
+        function challenge5 () {
+
+            var inputs = process.argv.slice(2);
+
+            console.log(`The minimum of [${ inputs }] is ${ Math.min( ...inputs ) }`);
+
+        },
+
+
+        function challenge6 () {
+
+            module.exports = function average( ...inputs ) {
+
+                var sum = 0;
+                var len = inputs.length;
+                for (var i = 0, e = len; i < e; i += 1)
+                {
+                    sum += inputs[i];
+                }
+
+                return sum / len;
+
+            };
+
         }
 
 
@@ -56,4 +81,4 @@ var challenge = 4;
 
     functions[f - 1].call();
 
-}(challenge));
+}(6));
