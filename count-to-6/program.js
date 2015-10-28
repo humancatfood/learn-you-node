@@ -73,6 +73,17 @@
 
             };
 
+        },
+
+
+        function challenge7 () {
+
+            module.exports = function midpoint(lower = 0, upper = 1) {
+
+                return lower + (upper - lower) / 2;
+
+            };
+
         }
 
 
@@ -81,4 +92,4 @@
 
     functions[f - 1].call();
 
-}(6));
+}( 7 ));
