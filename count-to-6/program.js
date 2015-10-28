@@ -84,6 +84,53 @@
 
             };
 
+        },
+
+
+        function challenge8 () {
+
+            module.exports = function makeImportant(msg, count = msg.length) {
+
+                for (var i = 0; i < count; i += 1)
+                {
+                    msg += '!';
+                }
+
+                return msg;
+
+            };
+
+        },
+
+
+        function challenge9 () {
+
+            console.log(html`<b>${process.argv[2]} says</b>: "${process.argv[3]}"`);
+
+            var escapes = {
+                '\'': '&apos',
+                '"': '&quot',
+                '<': '&lt',
+                '>': '&gt',
+                '&': '&amp'
+            };
+
+            function html (str, ...args)
+            {
+                return args.reduce(function (result, arg, i) {
+
+                    arg = arg
+                        .replace(/&/g, '&amp;')
+                        .replace(/'/g, '&apos;')
+                        .replace(/"/g, '&quot;')
+                        .replace(/</g, '&lt;')
+                        .replace(/>/g, '&gt;');
+
+                    return result + arg + str[i+1];
+
+                }, str[0]);
+            }
+
         }
 
 
@@ -92,4 +139,4 @@
 
     functions[f - 1].call();
 
-}( 7 ));
+}( 9 ));
