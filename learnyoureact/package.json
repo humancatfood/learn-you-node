@@ -1,0 +1,22 @@
+{
+  "name": "learnyoureact-exercises",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "homepage": "http://facebook.github.io/react/docs/thinking-in-react.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "learnyoureact"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3",
+    "express-react-views": "^0.9.0",
+    "learnyoureact": "^0.9.16",
+    "node-jsx": "^0.13.3",
+    "react": "^0.14.1",
+    "react-dom": "^0.14.1"
+  }
+}
