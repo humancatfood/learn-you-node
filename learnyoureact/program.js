@@ -8,9 +8,37 @@ app.engine('jsx', require('express-react-views').createEngine());
 
 require('node-jsx').install();
 
+//var data = [
+//    {
+//        title: 'moo',
+//        detail: 'baa'
+//    },
+//    {
+//        title: 'gni',
+//        detail: 'unf'
+//    },
+//    {
+//        title: 'ble',
+//        detail: 'gob'
+//    }
+//];
+
+var data = [
+    {
+        title: 'Shopping',
+        detail: process.argv[3]
+    },
+    {
+        title: 'Hair cut',
+        detail: process.argv[4]
+    }
+];
+
 app.use('/', function(req, res) {
     'use strict';
-    res.render('index', '');
+    res.render('index', {
+        data: data
+    });
 });
 
 app.listen(app.get('port'), function() {});
