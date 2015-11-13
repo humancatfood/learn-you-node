@@ -1,3 +1,5 @@
+// use variables for styles
+
 var React = require('react');
 
 

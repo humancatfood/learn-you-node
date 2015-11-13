@@ -1,16 +1,6 @@
 var React = require('react');
 
 
-var styles = {
-    table: {
-        border: '2px solid black'
-    },
-    tableContent: {
-        border: '1px solid black'
-    }
-};
-
-
 var TodoBox = React.createClass({
 
     render: function() {
@@ -31,7 +21,7 @@ var TodoList  = React.createClass({
     render: function () {
         return (
             <div className="todoList">
-                <table style={ styles.table }>
+                <table style={{ border: "2px solid black" }}>
                     <tbody>
                         <Todo title="Shopping">Milk</Todo>
                         <Todo title="Hair cut">13:00</Todo>
@@ -54,9 +44,9 @@ var Todo = React.createClass({
 
         return (
             <tr>
-                <td style={ styles.tableContent }><input type="checkbox" checked={ this.state.checked } onChange={ this.handleChange } /></td>
-                <td style={ styles.tableContent }>{ this.props.title }</td>
-                <td style={ styles.tableContent }>{ this.props.children }</td>
+                <td style={{ border: "1px solid black" }}><input type="checkbox" checked={ this.state.checked } onChange={ this.handleChange } /></td>
+                <td style={{ border: "1px solid black" }}>{ this.props.title }</td>
+                <td style={{ border: "1px solid black" }}>{ this.props.children }</td>
             </tr>
         );
 
