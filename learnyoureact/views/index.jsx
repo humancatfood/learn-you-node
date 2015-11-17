@@ -2,6 +2,12 @@ var React = require('react');
 
 
 var styles = {
+    checkedTodo: {
+        textDecoration: "line-through"
+    },
+    notCheckedTodo: {
+        textDecoration: "none"
+    },
     table: {
         border: '2px solid black'
     },
@@ -59,7 +65,7 @@ var Todo = React.createClass({
     render: function () {
 
         return (
-            <tr>
+            <tr style={this.state.checked ? styles.checkedTodo : styles.notCheckedTodo}>
                 <td style={ styles.tableContent }><input type="checkbox" checked={ this.state.checked } onChange={ this.handleChange } /></td>
                 <td style={ styles.tableContent }>{ this.props.title }</td>
                 <td style={ styles.tableContent }>{ this.props.children }</td>
@@ -84,7 +90,6 @@ var Todo = React.createClass({
             };
         });
 
-        console.log(this);
     }
 
 });
