@@ -1,0 +1,15 @@
+{
+  "name": "currying",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "curry"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "currying-workshopper": "^1.0.10"
+  }
+}
